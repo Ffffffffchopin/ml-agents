@@ -299,10 +299,13 @@ class UnityToGymWrapper(gym.Env):
 
     @staticmethod
     def _check_agents(n_agents: int) -> None:
+        '''
         if n_agents > 1:
             raise UnityGymException(
                 f"There can only be one Agent in the environment but {n_agents} were detected."
             )
+        '''
+        pass
 
     @property
     def metadata(self):
