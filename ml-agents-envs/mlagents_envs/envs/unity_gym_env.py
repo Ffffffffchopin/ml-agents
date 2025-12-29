@@ -189,7 +189,8 @@ class UnityToGymWrapper(gym.Env):
             action = self._flattener.lookup_action(action)
 
         #action = np.array(action).reshape((1, self.action_size))
-        action = np.array(action).reshape((1, *action.shape))
+        #action = np.array(action).reshape((1, *action.shape))
+        action = np.array(action)
 
         action_tuple = ActionTuple()
         if self.group_spec.action_spec.is_continuous():
